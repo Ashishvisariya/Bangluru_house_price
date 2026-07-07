@@ -1,0 +1,456 @@
+/* ---------- GOOGLE FONT ---------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ---------- BACKGROUND ---------- */
+
+body{
+    background-image: url("/static/images/house1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+/* ---------- DARK OVERLAY ---------- */
+
+.overlay{
+
+    width:100%;
+
+    min-height:100vh;
+
+    background:rgba(8,18,32,.70);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:60px;
+
+}
+
+/* ---------- LEFT PANEL ---------- */
+
+.left-panel{
+
+    width:48%;
+
+    color:white;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:35px;
+
+}
+
+.logo i{
+
+    color:#1fa2ff;
+
+    font-size:32px;
+
+}
+
+.logo span{
+
+    font-size:30px;
+
+    font-weight:700;
+
+}
+
+.left-panel h1{
+
+    font-size:70px;
+
+    line-height:1.05;
+
+    font-weight:700;
+
+}
+
+.left-panel h1 span{
+
+    color:#1fa2ff;
+
+}
+
+.left-panel p{
+
+    margin-top:25px;
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    color:#e2e2e2;
+
+}
+
+/* ---------- FEATURES ---------- */
+
+.features{
+
+    margin-top:35px;
+
+}
+
+.feature{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-bottom:22px;
+
+}
+
+.feature i{
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#13263f;
+
+    color:#1fa2ff;
+
+    font-size:22px;
+
+}
+
+.feature span{
+
+    font-size:20px;
+
+}
+
+/* ---------- STATS ---------- */
+
+.stats{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-top:50px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(10px);
+
+    padding:25px;
+
+    border-radius:18px;
+
+}
+
+.stat{
+
+    text-align:center;
+
+    color:white;
+
+}
+
+.stat i{
+
+    font-size:30px;
+
+    color:#1fa2ff;
+
+    margin-bottom:10px;
+
+}
+
+.stat h2{
+
+    font-size:32px;
+
+}
+
+.stat p{
+
+    margin-top:8px;
+
+    font-size:16px;
+
+}
+
+/* ---------- FORM CARD ---------- */
+
+.card{
+
+    width:470px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    color:white;
+
+    box-shadow:0 15px 45px rgba(0,0,0,.45);
+
+}
+
+/* ---------- FORM TITLE ---------- */
+
+.form-title{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:25px;
+
+}
+
+.form-title i{
+
+    font-size:35px;
+
+    color:#1fa2ff;
+
+}
+
+.form-title h2{
+
+    font-size:34px;
+
+}
+
+/* ---------- LABEL ---------- */
+
+label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    margin-top:18px;
+
+    font-weight:600;
+
+}
+
+/* ---------- INPUT ---------- */
+
+input,
+select{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    outline:none;
+
+}
+
+input:focus,
+select:focus{
+
+    box-shadow:0 0 15px #1fa2ff;
+
+}
+
+/* ---------- BUTTON ---------- */
+
+button{
+
+    width:100%;
+
+    margin-top:30px;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    background:linear-gradient(90deg,#0d8cff,#29c4ff);
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.4);
+
+}
+
+/* ---------- RESULT ---------- */
+
+.result-card{
+
+    margin-top:25px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    background:rgba(30,200,90,.15);
+
+    border:1px solid rgba(40,220,120,.4);
+
+    border-radius:15px;
+
+    padding:20px;
+
+}
+
+.price-icon{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:15px;
+
+    background:#22c55e;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.price-icon i{
+
+    color:white;
+
+    font-size:34px;
+
+}
+
+.result-card h4{
+
+    color:white;
+
+    font-size:18px;
+
+}
+
+.result-card h2{
+
+    color:#3cff74;
+
+    margin-top:8px;
+
+    font-size:36px;
+
+}
+
+.result-card p{
+
+    color:#ddd;
+
+    margin-top:8px;
+
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media(max-width:1100px){
+
+.overlay{
+
+    flex-direction:column;
+
+    padding:30px;
+
+}
+
+.left-panel{
+
+    width:100%;
+
+    margin-bottom:50px;
+
+}
+
+.left-panel h1{
+
+    font-size:45px;
+
+}
+
+.left-panel p{
+
+    font-size:18px;
+
+}
+
+.card{
+
+    width:100%;
+
+    max-width:500px;
+
+}
+
+.stats{
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+}

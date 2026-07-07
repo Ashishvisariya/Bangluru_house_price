@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bangalore House Price Predictor</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="overlay">
+
+    <!-- LEFT PANEL -->
+
+    <div class="left-panel">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-house"></i>
+
+            <span>Bangalore House Price Predictor</span>
+
+        </div>
+
+        <h1>
+
+            Bangalore <br>
+
+            <span>House Price</span><br>
+
+            Predictor
+
+        </h1>
+
+        <p>
+
+            Estimate the market value of residential properties in Bangalore
+            using a Machine Learning model trained on historical housing data.
+
+        </p>
+
+        <div class="features">
+
+            <div class="feature">
+
+                <i class="fa-solid fa-bolt"></i>
+
+                <span>Predict house prices instantly</span>
+
+            </div>
+
+            <div class="feature">
+
+                <i class="fa-solid fa-database"></i>
+
+                <span>Trained using Bangalore housing dataset</span>
+
+            </div>
+
+            <div class="feature">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                <span>Supports 20+ popular locations</span>
+
+            </div>
+
+            <div class="feature">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <span>Fast and accurate ML prediction</span>
+
+            </div>
+
+        </div>
+
+        <div class="stats">
+
+            <div class="stat">
+
+                <i class="fa-solid fa-house"></i>
+
+                <h2>20+</h2>
+
+                <p>Locations</p>
+
+            </div>
+
+            <div class="stat">
+
+                <i class="fa-solid fa-chart-column"></i>
+
+                <h2>13K+</h2>
+
+                <p>Records</p>
+
+            </div>
+
+            <div class="stat">
+
+                <i class="fa-solid fa-award"></i>
+
+                <h2>High</h2>
+
+                <p>Accuracy</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- RIGHT PANEL -->
+
+    <div class="card">
+
+        <div class="form-title">
+
+            <i class="fa-solid fa-house-circle-check"></i>
+
+            <h2>Prediction Form</h2>
+
+        </div>
+
+        <form action="/predict" method="POST">
+
+            <label>Location</label>
+
+            <select name="location" required>
+
+                <option value="other">Other</option>
+                <option value="Whitefield">Whitefield</option>
+                <option value="Sarjapur  Road">Sarjapur Road</option>
+                <option value="Electronic City">Electronic City</option>
+                <option value="Raja Rajeshwari Nagar">Raja Rajeshwari Nagar</option>
+                <option value="Uttarahalli">Uttarahalli</option>
+                <option value="Haralur Road">Haralur Road</option>
+                <option value="Marathahalli">Marathahalli</option>
+                <option value="Bannerghatta Road">Bannerghatta Road</option>
+                <option value="Hennur Road">Hennur Road</option>
+                <option value="Thanisandra">Thanisandra</option>
+                <option value="Hebbal">Hebbal</option>
+                <option value="Kanakpura Road">Kanakpura Road</option>
+                <option value="Electronic City Phase II">Electronic City Phase II</option>
+                <option value="Yelahanka">Yelahanka</option>
+                <option value="7th Phase JP Nagar">7th Phase JP Nagar</option>
+                <option value="Bellandur">Bellandur</option>
+                <option value="KR Puram">KR Puram</option>
+                <option value="Chandapura">Chandapura</option>
+                <option value="Harlur">Harlur</option>
+
+            </select>
+
+            <label>Total Area (Sqft)</label>
+
+            <input
+                type="number"
+                name="total_sqft"
+                placeholder="Minimum 300 sqft"
+                min="300"
+                required>
+
+            <label>Bathrooms</label>
+
+            <input
+                type="number"
+                name="bath"
+                placeholder="Minimum 1"
+                min="1"
+                required>
+
+            <label>Bedrooms (BHK)</label>
+
+            <input
+                type="number"
+                name="bhk"
+                placeholder="Minimum 1"
+                min="1"
+                required>
+
+            <button type="submit">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                Predict Price
+
+            </button>
+
+        </form>
+
+        {% if prediction_text %}
+
+        <div class="result-card">
+
+            <div class="price-icon">
+
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+
+            </div>
+
+            <div>
+
+                <h4>Predicted Price</h4>
+
+                <h2>{{ prediction_text }}</h2>
+
+                <p>This is an estimated market value.</p>
+
+            </div>
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
